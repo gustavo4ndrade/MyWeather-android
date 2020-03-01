@@ -1,4 +1,4 @@
-package com.gustavo.myweather.ui.weather.current
+package com.gustavo.myweather.ui.weather
 
 import androidx.lifecycle.ViewModel
 

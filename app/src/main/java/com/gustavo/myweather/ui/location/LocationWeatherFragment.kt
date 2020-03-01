@@ -1,4 +1,4 @@
-package com.gustavo.myweather.ui.weather.current
+package com.gustavo.myweather.ui.location
 
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
@@ -9,24 +9,24 @@ import android.view.ViewGroup
 
 import com.gustavo.myweather.R
 
-class CurrentWeatherFragment : Fragment() {
+class LocationWeatherFragment : Fragment() {
 
     companion object {
-        fun newInstance() = CurrentWeatherFragment()
+        fun newInstance() = LocationWeatherFragment()
     }
 
-    private lateinit var viewModel: CurrentWeatherViewModel
+    private lateinit var viewModel: LocationWeatherViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.current_weather_fragment, container, false)
+        return inflater.inflate(R.layout.future_weather_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(CurrentWeatherViewModel::class.java)
+        viewModel = ViewModelProviders.of(this).get(LocationWeatherViewModel::class.java)
         // TODO: Use the ViewModel
     }
 
